@@ -13,8 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'AgentForge Academy | Build and Govern AI Agents',
   description: 'A beginner-first, CISSP-aligned learning lab for building useful and securely governed agentic AI systems.',
+  openGraph: {
+    title: 'AgentForge Academy',
+    description: 'Build useful AI agents. Keep them in bounds.',
+    images: ['/og.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AgentForge Academy',
+    description: 'Build useful AI agents. Keep them in bounds.',
+    images: ['/og.png'],
+  },
 };
 
 export default function RootLayout({
